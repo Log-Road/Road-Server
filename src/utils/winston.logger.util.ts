@@ -28,7 +28,7 @@ export const WinstonInstance = createLogger({
   ],
   format: format.combine(
     format.splat(),
-    format.printf(({level, message}) => `[${level}] ${new Date().toISOString()} [ARAM SERVER] - ${message}`)
+    format.printf(({level, message}) => `[${level}] ${new Date().toISOString()} [ROAD] - ${message}`)
   )
 });
 

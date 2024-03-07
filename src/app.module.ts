@@ -1,4 +1,4 @@
-import { Module } from '@nestjs/common';
+import { Module, Logger } from '@nestjs/common';
 import { VoteModule } from './vote/vote.module';
 import { ManageModule } from './manage/manage.module';
 import { UploadModule } from './upload/upload.module';
@@ -6,7 +6,7 @@ import { UserModule } from './user/user.module';
 import { ConfigModule } from '@nestjs/config';
 import { WinstonModule } from 'nest-winston';
 import { WinstonInstance } from './utils/winston.logger.util';
-import { Logger } from 'winston';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
@@ -22,7 +22,7 @@ import { Logger } from 'winston';
     VoteModule, 
     ManageModule,
     UploadModule, 
-    UserModule
+    UserModule, AuthModule
   ],
   controllers: [],
   providers: [Logger],
